@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <form method="post"  enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="container">
+            <div class="row">
+                 <div class="col-md-6">
+                         <label for="movie_name">Name of the movie: </label>
+                 </div>
+                         <div class="col-md-6">
+                             <input type="text" name="name" id="movie_name"><br>
+                         </div>
+            </div>
+            <div class="row">
+                 <div class="col-md-6">
+                     <label for="description">Description:</label>
+                 </div>
+                     <div class="col-md-6">
+                         <input type="text" name="desc" id="description"><br>
+                     </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="movie_year">Year of the Movie</label>
+                </div>
+                    <div class="col-md-6">
+                        <input type="text" name="year" id="movie_year"><br>
+                    </div>
+            </div>
+            <div class="row">
+                 <div class="col-md-6">
+                    <label for="img_movie">Image of the movie</label>
+                 </div>
+                     <div class="col-md-6">
+                          <input type="file" name="img" id="img_movie"><br>
+                     </div>
+            </div>
+        <div class="row" style="text-align:center;">
+            <div class="col-12">
+                 <input  type="submit" value="submit" style="display:inline-block;width:100px;margin-left:130px;margin-top:20px;">
+            </div>
+
+        </div>
+
+
+
+    </form>
+</div>
+{% endblock %}
